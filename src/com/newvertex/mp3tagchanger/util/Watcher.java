@@ -1,5 +1,6 @@
-package com.newvertex.mp3tagchanger;
+package com.newvertex.mp3tagchanger.util;
 
+import com.newvertex.mp3tagchanger.Mp3TagChanger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.contentobjects.jnotify.JNotify;

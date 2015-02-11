@@ -1,5 +1,7 @@
 package com.newvertex.mp3tagchanger;
 
+import com.newvertex.mp3tagchanger.util.Watcher;
+import com.newvertex.mp3tagchanger.util.GetAllFiles;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -28,6 +30,7 @@ public class Mp3TagChanger {
                     System.out.println("Files: " + files);
                     break;
                 case "3":
+                    System.out.println("TODO: Set Tags Section...");
                     break;
                 case "4":
                     System.exit(0);

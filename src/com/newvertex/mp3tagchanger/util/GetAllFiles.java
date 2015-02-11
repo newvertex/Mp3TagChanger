@@ -1,4 +1,4 @@
-package com.newvertex.mp3tagchanger;
+package com.newvertex.mp3tagchanger.util;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
