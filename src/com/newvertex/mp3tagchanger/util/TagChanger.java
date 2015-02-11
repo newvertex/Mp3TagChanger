@@ -1,4 +1,4 @@
-package com.newvertex.mp3tagchanger;
+package com.newvertex.mp3tagchanger.util;
 
 import com.newvertex.mp3tagchanger.model.Tags;
 import java.io.File;
@@ -13,7 +13,16 @@ import org.jaudiotagger.tag.Tag;
 
 public class TagChanger {
 
-    public void changeTag(File file, Tags tags) {
+    private TagChanger() {
+    }
+
+    public static void ChangeTags(ArrayList<Path> files, Tags tags) {
+        files.forEach(file -> {
+            changeTag(file.toFile(), tags);
+        });
+    }
+
+    public static void changeTag(File file, Tags tags) {
         AudioFile audioFile;
         try {
             audioFile = AudioFileIO.read(file);
