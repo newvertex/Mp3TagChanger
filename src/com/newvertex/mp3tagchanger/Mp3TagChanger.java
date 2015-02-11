@@ -1,5 +1,7 @@
 package com.newvertex.mp3tagchanger;
 
+import java.io.File;
+import java.util.Scanner;
 import net.contentobjects.jnotify.JNotify;
 import net.contentobjects.jnotify.JNotifyAdapter;
 import net.contentobjects.jnotify.JNotifyException;
@@ -7,6 +9,13 @@ import net.contentobjects.jnotify.JNotifyException;
 public class Mp3TagChanger {
 
     public static void main(String[] args) {
+
+        System.out.println("Enter directory path:");
+        String path = new Scanner(System.in).nextLine();
+        
+        if (!path.endsWith(File.separator)) {
+            path += File.separator;
+        }
 
     }
 
