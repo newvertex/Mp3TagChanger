@@ -38,7 +38,9 @@ public class Mp3TagChanger {
     }
 
     private static void watching() {
-        Watcher.watchCreate(getPath());
+        String path = getPath();
+        Watcher.watchCreate(path);
+        System.out.println("Watching: " + path);
         System.out.println("For close the program type: exit");
         while (true) {
             Scanner scanner = new Scanner(System.in);
