@@ -21,6 +21,13 @@ public class Mp3TagChanger {
 
         new Mp3TagChanger().watchCreate(path);
 
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            if (scanner.nextLine().toLowerCase().equals("exit")) {
+                break;
+            }
+        }
+
     }
 
     private void watchCreate(String path) {
