@@ -42,6 +42,7 @@ public class TagChanger {
         } catch (Exception ex) {
             Logger.getLogger(TagChanger.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println(" +" + file);
     }
 
 }

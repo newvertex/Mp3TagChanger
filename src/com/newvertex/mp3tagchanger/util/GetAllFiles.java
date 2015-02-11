@@ -30,8 +30,9 @@ public class GetAllFiles {
 
         @Override
         public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-            System.out.println("FileVisited: " + file);
-            files.add(file);
+            if (file.toString().endsWith(".mp3")) {
+                files.add(file);
+            }
             return FileVisitResult.CONTINUE;
         }
 

@@ -1,13 +1,17 @@
 package com.newvertex.mp3tagchanger;
 
+import com.newvertex.mp3tagchanger.model.Tags;
 import com.newvertex.mp3tagchanger.util.Watcher;
 import com.newvertex.mp3tagchanger.util.GetAllFiles;
+import com.newvertex.mp3tagchanger.util.TagChanger;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Mp3TagChanger {
+
+    private static Tags tags;
 
     public static void main(String[] args) {
         new Mp3TagChanger().mainMenu();
@@ -27,7 +31,7 @@ public class Mp3TagChanger {
                     break;
                 case "2":
                     ArrayList<Path> files = GetAllFiles.getFiles(getPath());
-                    System.out.println("Files: " + files);
+                    TagChanger.ChangeTags(files, tags);
                     break;
                 case "3":
                     System.out.println("TODO: Set Tags Section...");
@@ -42,7 +46,7 @@ public class Mp3TagChanger {
 
     private static void watching() {
         String path = getPath();
-        Watcher.watchCreate(path);
+        Watcher.watchCreate(path, tags);
         System.out.println("Watching: " + path);
         System.out.println("For close the program type: exit");
         while (true) {
