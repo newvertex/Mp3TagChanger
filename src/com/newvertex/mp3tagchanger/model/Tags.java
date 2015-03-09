@@ -16,7 +16,11 @@ public class Tags implements Serializable {
     private String artists;
 
     public Tags() {
-        this("NoTitle", "NoSubTitle", "NoComment", "NoComposer", "NoAlbum", "NoAlbumArtist", "NoArtist", "NoArtists");
+        this("", "", "", "", "", "", "", "");
+    }
+
+    public Tags(String tag) {
+        this(tag, tag, tag, tag, tag, tag, tag, tag);
     }
 
     public Tags(String title, String subTitle, String comment, String composer, String album, String albumArtist, String artist, String artists) {
