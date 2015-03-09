@@ -21,22 +21,20 @@ public class Mp3TagChanger {
         while (true) {
             System.out.println("1. Watching for new file and change tag.\n"
                     + "2. Change all files tag.\n"
-                    + "3. Set tsgs.\n"
-                    + "4. Exit.");
-            System.out.print("$ ");
+                    + "3. Exit.\n"
+                    + "$ ");
             String item = new Scanner(System.in).nextLine();
             switch (item) {
                 case "1":
+                    setTagsText();
                     watching();
                     break;
                 case "2":
+                    setTagsText();
                     ArrayList<Path> files = GetAllFiles.getFiles(getPath());
                     TagChanger.ChangeTags(files, tags);
                     break;
                 case "3":
-                    System.out.println("TODO: Set Tags Section...");
-                    break;
-                case "4":
                     System.exit(0);
                     break;
                 default:
@@ -66,5 +64,55 @@ public class Mp3TagChanger {
             path += File.separator;
         }
         return path;
+    }
+
+    private void setTagsText() {
+        tags = new Tags();
+        System.out.println("The default Tags is empty string.\n"
+                + "1. Title tag for all.\n"
+                + "2. Each tag separately.\n"
+                + "$ ");
+        String item = new Scanner(System.in).nextLine();
+        switch (item) {
+            case "1":
+                System.out.print("Enter the title:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags = new Tags(item);
+                break;
+            case "2":
+                System.out.print("Enter the Title:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setTitle(item);
+
+                System.out.print("Enter the SubTitle:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setSubTitle(item);
+
+                System.out.print("Enter the Comment:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setComment(item);
+
+                System.out.print("Enter the Composer:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setComposer(item);
+
+                System.out.print("Enter the Album:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setAlbum(item);
+
+                System.out.print("Enter the AlbumArtist:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setAlbumArtist(item);
+
+                System.out.print("Enter the Artist:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setArtist(item);
+
+                System.out.print("Enter the Artists:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setArtists(item);
+                break;
+            default:
+        }
     }
 }
