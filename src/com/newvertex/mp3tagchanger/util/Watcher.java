@@ -34,6 +34,11 @@ public class Watcher {
         public void fileCreated(int wd, String rootPath, String name) {
             File file = new File(rootPath + name);
             if (file.isFile() && name.endsWith(".mp3")) {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Watcher.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 TagChanger.changeTag(file, tags);
             }
 
