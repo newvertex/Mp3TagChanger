@@ -30,7 +30,7 @@ public class GetAllFiles {
 
         @Override
         public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-            if (file.toString().endsWith(".mp3")) {
+            if (file.toString().toLowerCase().endsWith(".mp3")) {
                 files.add(file);
             }
             return FileVisitResult.CONTINUE;

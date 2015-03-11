@@ -33,7 +33,7 @@ public class Watcher {
         @Override
         public void fileCreated(int wd, String rootPath, String name) {
             File file = new File(rootPath + name);
-            if (file.isFile() && name.endsWith(".mp3")) {
+            if (file.isFile() && name.toLowerCase().endsWith(".mp3")) {
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException ex) {
