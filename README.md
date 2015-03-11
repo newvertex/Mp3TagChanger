@@ -1,8 +1,17 @@
 # Mp3TagChanger
-Small console application for change mp3 files tags
+Small application for change mp3 files tags  
+This program changes this tags:  
+"title, subTitle, comment, composer, album, albumArtist, artist, artists, genre"  
+  
 ### Requirements
 For use this app you have to install java 8:  
 http://www.oracle.com/technetwork/java/javase/downloads/index.html  
 
 ### Download
-Mp3TagChanger-0.0.1.zip (https://www.dropbox.com/s/qn32heaao3c587w/Mp3TagChanger-0.0.1.zip?dl=0)
+Console version:  
+Mp3TagChanger-0.0.2.zip (https://www.dropbox.com/s/b83zwt7phfx3kgm/Mp3TagChanger-0.0.2.zip?dl=0)
+
+### Run
+- If you download zip file from above link for run it just open launcher.bat file.  
+- If you want to run compiled jar file from command line just use this command:  
+`java -Djava.library.path="lib/native" -jar Mp3TagChanger.jar`
