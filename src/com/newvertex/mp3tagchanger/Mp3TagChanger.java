@@ -111,6 +111,10 @@ public class Mp3TagChanger {
                 System.out.print("Enter the Artists:$ ");
                 item = new Scanner(System.in).nextLine();
                 tags.setArtists(item);
+                
+                System.out.print("Enter the Genre:$ ");
+                item = new Scanner(System.in).nextLine();
+                tags.setGenre(item);
                 break;
             default:
         }

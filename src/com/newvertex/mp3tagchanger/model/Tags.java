@@ -14,16 +14,19 @@ public class Tags implements Serializable {
     private String albumArtist;
     private String artist;
     private String artists;
+    private String genre;
 
     public Tags() {
-        this("", "", "", "", "", "", "", "");
+        this("", "", "", "", "", "", "", "", "");
     }
 
     public Tags(String tag) {
-        this(tag, tag, tag, tag, tag, tag, tag, tag);
+        this(tag, tag, tag, tag, tag, tag, tag, tag, tag);
     }
 
-    public Tags(String title, String subTitle, String comment, String composer, String album, String albumArtist, String artist, String artists) {
+    public Tags(String title, String subTitle, String comment, String composer,
+            String album, String albumArtist, String artist, String artists,
+            String genre) {
         this.title = title;
         this.subTitle = subTitle;
         this.comment = comment;
@@ -32,6 +35,7 @@ public class Tags implements Serializable {
         this.albumArtist = albumArtist;
         this.artist = artist;
         this.artists = artists;
+        this.genre = genre;
     }
 
     public String getTitle() {
@@ -98,4 +102,11 @@ public class Tags implements Serializable {
         this.artists = artists;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 }

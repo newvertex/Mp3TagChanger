@@ -36,7 +36,7 @@ public class TagChanger {
             tag.setField(FieldKey.ALBUM_ARTIST, tags.getAlbumArtist());
             tag.setField(FieldKey.ARTIST, tags.getArtist());
             tag.setField(FieldKey.ARTISTS, tags.getArtists());
-
+            tag.setField(FieldKey.GENRE, tags.getGenre());
             audioFile.commit();
 
         } catch (Exception ex) {
